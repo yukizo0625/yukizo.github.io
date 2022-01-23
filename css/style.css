@@ -1,0 +1,107 @@
+/* common */
+body{
+  margin: 0;
+}
+img{
+  vertical-align: bottom;    /* img要素はデフォルトでベースラインに沿って配置される。余白をリセット */
+}
+
+h1,h2{
+  font-weight: normal;
+}
+
+h1,
+h2,
+p{
+  margin: 0;    /* 全ての h1とpに対して余白をリセットしたいのでmargin0設定 */
+}
+
+/* header */
+.container{
+  width: 400px;
+  margin: 0 auto;
+}
+
+header{
+  background: #efefef;
+}
+header .container{
+  outline:2px solid red;
+  padding: 32px 0;
+  display: flex;
+  align-items: center;
+}
+
+header .container div + div{
+  margin-left:32px;
+}
+
+header h1{
+  font-size: 24px;
+}
+header ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+header ul li + li {
+  margin-left: 8px;
+}
+
+header .icon{
+  border-radius: 50%;
+}
+/* main */
+main .container{
+  outline: 2px solid red;
+  /* outlinは確認用のため後で削除 */
+}
+
+main h1{
+  font-size: 24px;
+  text-align: center;
+  padding: 60px;
+  background: pink;
+}
+main h2{
+  font-size: 20px;
+  margin-top: 16px;
+}
+main p{
+  line-height: 1.8;
+  margin-top:16px ;
+}
+main section + section{
+  margin-top: 60px;
+}
+/* footer */
+
+footer{
+  padding: 60px 0;
+  text-align: center;
+  color: #aaa;  
+}
+
+/* animate */
+.animate{
+  opacity: 0;
+  transition: opacity 0.3s,transform 0.3s;
+}
+.animate.slide-from-left{
+  transform: translateX(-40px);
+}
+.animate.slide-from-right{
+  transform: translateX(40px);
+}
+
+
+.animate.appear{
+  opacity: 1;
+  transform: none;
+}
+
+
+
+
+
