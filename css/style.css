@@ -1,86 +1,97 @@
 /* common */
-body{
+
+body {
   margin: 0;
 }
-img{
-  vertical-align: bottom;    /* img要素はデフォルトでベースラインに沿って配置される。余白をリセット */
-}
 
-h1,h2{
-  font-weight: normal;
+img {
+  vertical-align: bottom;
 }
 
 h1,
 h2,
-p{
-  margin: 0;    /* 全ての h1とpに対して余白をリセットしたいのでmargin0設定 */
+h3
+p {
+  margin: 0;
 }
 
-/* header */
-.container{
+/* h1,
+h2 ,
+h3{
+  font-weight: normal;
+} */
+
+.container {
   width: 400px;
   margin: 0 auto;
 }
+li{
+  list-style: none;
+}
 
-header{
+/* header */
+
+header {
   background: #efefef;
 }
-header .container{
-  outline:2px solid red;
+
+header .container {
   padding: 32px 0;
   display: flex;
   align-items: center;
 }
 
-header .container div + div{
-  margin-left:32px;
+header .container div + div {
+  margin-left: 32px;
 }
 
-header h1{
+header h1 {
   font-size: 24px;
 }
-header ul{
+
+header ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
+
 header ul li + li {
   margin-left: 8px;
 }
 
-header .icon{
+header .icon {
   border-radius: 50%;
 }
+
 /* main */
-main .container{
-  outline: 2px solid red;
-  /* outlinは確認用のため後で削除 */
+
+main h1 {
+  /* font-size: 24px; */
+  text-align: center;
+  padding: 60px 0;
 }
 
-main h1{
-  font-size: 24px;
-  text-align: center;
-  padding: 60px;
-  background: pink;
-}
-main h2{
-  font-size: 20px;
+main h2 {
+  /* font-size: 20px; */
   margin-top: 16px;
 }
-main p{
+
+main p {
   line-height: 1.8;
-  margin-top:16px ;
+  margin-top: 16px;
 }
-main section + section{
+
+main section + section {
   margin-top: 60px;
 }
+
 /* footer */
 
-footer{
+footer {
   padding: 60px 0;
   text-align: center;
-  color: #aaa;  
+  color: #aaa;
 }
 
 /* animate */
@@ -88,20 +99,16 @@ footer{
   opacity: 0;
   transition: opacity 0.3s,transform 0.3s;
 }
-.animate.slide-from-left{
+
+.animate.slied-from-left{
   transform: translateX(-40px);
 }
-.animate.slide-from-right{
+.animate.slied-from-right{
   transform: translateX(40px);
 }
-
 
 .animate.appear{
   opacity: 1;
   transform: none;
 }
-
-
-
-
 
